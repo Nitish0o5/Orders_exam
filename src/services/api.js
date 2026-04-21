@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = " https://t4e-testserver.onrender.com/api";
+const BASE_URL = "https://t4e-testserver.onrender.com/api";
 
 export const getToken = async (studentId, password, set) => {
   const { data } = await axios.post(`${BASE_URL}/public/token`, {
@@ -19,5 +19,5 @@ export const getDataset = async (token, dataUrl) => {
     },
   });
 
-  return data.data;
+  return Array.isArray(data?.data?.orders) ? data.data.orders : [];
 };

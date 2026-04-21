@@ -1,11 +1,11 @@
 import React from 'react'
 import { OrderProvider } from './context/Ordercontext'
+import AppRouter from './Router/Approuter'
 
 function App() {
   return (
     <OrderProvider>
-      <div className="App">
-      </div>
+      <AppRouter />
     </OrderProvider>
   )
 }
